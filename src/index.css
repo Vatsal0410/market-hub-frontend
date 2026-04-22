@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import "tailwindcss";
+@import "tailwindcss-animated";
+
+@theme {
+  --default-font-family: "Plus Jakarta Sans", sans-serif;
+  
+  --animate-pulse-move-lr: pulse-move-lr 8s ease-in-out infinite;
+  --animate-pulse-move-rl: pulse-move-rl 8s ease-in-out infinite;
+
+  @keyframes pulse-move-lr {
+    0%, 100% { 
+      opacity: 0.4;
+      transform: translateX(0) rotate(var(--tw-rotate)); 
+    }
+    50% { 
+      opacity: 0.2; /* This recreates the animate-pulse effect */
+      transform: translateX(25px) rotate(var(--tw-rotate)); 
+    }
+  }
+
+  @keyframes pulse-move-rl {
+    0%, 100% { 
+      opacity: 0.4;
+      transform: translateX(0) rotate(var(--tw-rotate)); 
+    }
+    50% { 
+      opacity: 0.2; 
+      transform: translateX(-25px) rotate(var(--tw-rotate)); 
+    }
+  }
+}
